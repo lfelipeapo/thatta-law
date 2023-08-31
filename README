@@ -1,5 +1,5 @@
-# Thatta Law
+#Thatta Law
 
-## Microsserviço responsável por resgatar dados legais a respeito a legislação brasileira.
+##Microsserviço responsável por resgatar dados a respeito da legislação brasileira.
 
-### Este sistema é desenvolvido em Python visando servir de API externa para o projeto ThataSystem apresentado como requisito para PUC Rio em virtude do projeto prático de MVP.
+###Este sistema é desenvolvido em Python visando servir como API externa para o projeto ThataSystem apresentado como requisito para PUC Rio em virtude do projeto prático de MVP.
