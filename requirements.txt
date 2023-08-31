@@ -1,0 +1,5 @@
+Flask
+flask-restful
+flask-openapi3
+requests
+beautifulsoup4
