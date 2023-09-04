@@ -1,18 +1,15 @@
-# Use a imagem oficial do Python
+# Imagem base
 FROM python:3.9
 
-# Defina o diretório de trabalho
+# Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copie os arquivos necessários para o container
-COPY requirements.txt .
-COPY app.py .
+# Copia os arquivos de código-fonte para o diretório de trabalho
+COPY . /app
 
-# Instale as dependências
-RUN pip install --no-cache-dir -r requirements.txt
+# Instala as dependências do projeto
+RUN pip install -r requirements.txt
 
-# Exponha a porta que o app usa
+# Expõe a porta 5001 para acessar a API
+
 EXPOSE 5001
-
-# Comando para rodar o aplicativo
-CMD ["python", "app.py"]
