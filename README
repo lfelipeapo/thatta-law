@@ -6,9 +6,9 @@ A Thatta Law API é um microsserviço desenvolvido para capturar e fornecer dado
 
 ## Componentes
 
-- **Componente A**: [Descrição do Componente A]
-- **Componente B**: Thatta Law API (Este repositório)
-- **Componente C**: [Descrição do Componente C]
+- **Componente A**: [Tata System](https://github.com/lfelipeapo/tata-system) - Frontend do sistema.
+- **Componente B**: [Legis Senado](https://legis.senado.leg.br/dadosabertos/docs/resource_LegislacaoService.html) - API externa que fornece dados sobre legislação.
+- **Componente C**: [Tata System API](https://github.com/lfelipeapo/tata-system-api) - Backend do sistema.
 
 ## Instalação e Execução
 
@@ -27,7 +27,7 @@ docker build -t thatta-law-api .
 docker run -p 5001:5001 thatta-law-api
 ```
 
-Execução alternativa com docker-compose.yml:
+### Execução alternativa com docker-compose.yml:
 
 3. Execute o seguinte comando para construir a imagem Docker e executá-la em caso de docker-compose:
 
@@ -40,21 +40,21 @@ docker-compose up --build
 ### Leis
 
 **GET /scrape**
-- Descrição: Obtém uma listagem do códice brasileiro (conjunto legal brasileiro).
-- Respostas possíveis:
-200 OK: Retorna a lista de documentos.
-400 Bad Request: Solicitação inválida.
-422 Unprocessable Entity: Entidade não processável.
-500 Internal Server Error: Erro interno do servidor.
-- Parâmetros:
-keyword (obrigatório): Palavra-chave para a busca.
-tipoDocumento (opcional): Tipo de documento a ser buscado.
-sort (opcional): Ordenação dos resultados.
+- **Descrição**: Obtém uma listagem do códice brasileiro (conjunto legal brasileiro).
+- **Respostas possíveis**:
+  - **200 OK**: Retorna a lista de documentos.
+  - **400 Bad Request**: Solicitação inválida.
+  - **422 Unprocessable Entity**: Entidade não processável.
+  - **500 Internal Server Error**: Erro interno do servidor.
+- **Parâmetros**:
+  - `keyword` (obrigatório): Palavra-chave para a busca.
+  - `tipoDocumento` (opcional): Tipo de documento a ser buscado.
+  - `sort` (opcional): Ordenação dos resultados.
 
 ### Documentação
 
 **GET /**
-- Descrição: Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
+- **Descrição**: Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
 
 ## Esquemas
 
@@ -70,3 +70,5 @@ Para contribuir com este projeto, siga as diretrizes de contribuição fornecida
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+---
