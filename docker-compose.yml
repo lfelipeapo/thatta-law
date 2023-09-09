@@ -1,11 +1,21 @@
 version: '3'
+
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    command: sh -c "flask run --host 0.0.0.0 --port 5001 --reload"
+    command: sh -c "scrapy startproject lexml && flask run --host 0.0.0.0 --port 5001 --reload"
     ports:
       - '5001:5001'
     volumes:
       - .:/app
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
