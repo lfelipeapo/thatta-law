@@ -1,5 +1,72 @@
-#Thatta Law
+# Thatta Law API
 
-##Microsserviço responsável por resgatar dados a respeito da legislação brasileira.
+## Descrição
 
-###Este sistema é desenvolvido em Python visando servir como API externa para o projeto ThataSystem apresentado como requisito para PUC Rio em virtude do projeto prático de MVP.
+A Thatta Law API é um microsserviço desenvolvido para capturar e fornecer dados sobre leis brasileiras. Esta API foi construída seguindo os princípios de componentização e microsserviços, permitindo uma arquitetura modular e escalável.
+
+## Componentes
+
+- **Componente A**: [Descrição do Componente A]
+- **Componente B**: Thatta Law API (Este repositório)
+- **Componente C**: [Descrição do Componente C]
+
+## Instalação e Execução
+
+Certifique-se de ter o Docker em seu computador para correta execução deste componente.
+
+### Docker
+
+1. Clone este repositório.
+2. Navegue até o diretório do projeto.
+3. Execute o seguinte comando para construir a imagem Docker:
+```
+docker build -t thatta-law-api .
+```
+4. Execute o container:
+```
+docker run -p 5001:5001 thatta-law-api
+```
+
+Execução alternativa com docker-compose.yml:
+
+3. Execute o seguinte comando para construir a imagem Docker e executá-la em caso de docker-compose:
+
+```
+docker-compose up --build
+```
+
+## Rotas
+
+### Leis
+
+**GET /scrape**
+- Descrição: Obtém uma listagem do códice brasileiro (conjunto legal brasileiro).
+- Respostas possíveis:
+200 OK: Retorna a lista de documentos.
+400 Bad Request: Solicitação inválida.
+422 Unprocessable Entity: Entidade não processável.
+500 Internal Server Error: Erro interno do servidor.
+- Parâmetros:
+keyword (obrigatório): Palavra-chave para a busca.
+tipoDocumento (opcional): Tipo de documento a ser buscado.
+sort (opcional): Ordenação dos resultados.
+
+### Documentação
+
+**GET /**
+- Descrição: Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
+
+## Esquemas
+
+- **DocumentListagemSchema**
+- **DocumentSchema**
+- **MensagemResposta**
+- **UnprocessableEntity**
+
+## Contribuição
+
+Para contribuir com este projeto, siga as diretrizes de contribuição fornecidas no arquivo CONTRIBUTING.md.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
