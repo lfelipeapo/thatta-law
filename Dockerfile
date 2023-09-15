@@ -9,7 +9,7 @@ COPY . /app
 
 # Atualiza o pip
 RUN pip install --upgrade pip
-
+    
 # Instala as dependências do projeto
 RUN pip install -r requirements.txt
 
