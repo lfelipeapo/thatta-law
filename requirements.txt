@@ -12,6 +12,4 @@ aiohttp==3.8.3
 asyncio==3.4.3
 httpx==0.23.3
 redis==4.3.4
-scrapy==2.7.1
 twisted==22.10.0
-scrapy-redis==0.7.3

@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: sh -c "scrapy startproject lexml && flask run --host 0.0.0.0 --port 5001 --reload"
+    command: sh -c "flask run --host 0.0.0.0 --port 5001 --reload"
     ports:
       - '5001:5001'
     volumes:
